@@ -1,0 +1,26 @@
+{
+  "name": "kah_rosterjob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hh-rvp": "node index.js data/roster.csv 11 44 6 1 2 3 52 53 49 54 HH_RVP_Load.csv",
+    "hh-vp": "node index.js data/roster.csv 16 44 6 1 2 3 52 53 49 54 HH_VP_Load.csv",
+    "create-load": "node index.js data/roster.csv 12,17,22,27,32,45 45 6 1 2 3 50 51 52 41 53 load.csv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorwsmit/kah_RosterJob.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorwsmit/kah_RosterJob/issues"
+  },
+  "homepage": "https://github.com/jorwsmit/kah_RosterJob#readme",
+  "dependencies": {
+    "papaparse": "^5.3.1",
+    "prompt": "^1.2.0"
+  }
+}
