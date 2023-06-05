@@ -19,4 +19,5 @@ explanation of parameters by index
 8: column index of SalesPro
 9: column index of TAF
 10: column index of Date of Hire
-11: path of created load file
+11: Rebrand date
+12: path of created load file

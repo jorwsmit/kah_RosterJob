@@ -1,3 +1,4 @@
+const { log } = require('console');
 const fs = require('fs');
 const Papa = require('papaparse');
 
@@ -30,7 +31,6 @@ function processResults(data) {
     var object = {};
 
     for (row of data) {
-
         let user = {
             'Line_of_Business__c': row[myArgs[3]],
             'Region__c': row[myArgs[4]],
@@ -50,6 +50,14 @@ function processResults(data) {
                 perner.add(key);
                 let region = user.Region__c;
                 region = region.substring(0, region.indexOf(' ('));
+                let area = user.Area__c;
+                let market = user.Market__c;
+                // console.log(pernerColumn, pernerColumnNums[0], pernerColumnNums[1], pernerColumnNums[3]);
+                if (pernerColumn === pernerColumnNums[0] || pernerColumn === pernerColumnNums[1]) {
+                    area = '', market = '';
+                } else if (pernerColumn === pernerColumnNums[3]) {
+                    market = '';
+                }
                 let rebrandPhase = '';
                 let phase1 = '3/1/22';
                 let phase2 = '6/1/22';
@@ -65,8 +73,8 @@ function processResults(data) {
                     key,
                     user.Line_of_Business__c,
                     region,
-                    user.Area__c,
-                    user.Market__c,
+                    area,
+                    market,
                 ];
                 if (pernerColumn == salesAssociatePernerColumn) {
                     user_row.push(user.KindredPro__c);
