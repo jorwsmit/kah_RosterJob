@@ -55,7 +55,7 @@ function processResults(data) {
                 // console.log(pernerColumn, pernerColumnNums[0], pernerColumnNums[1], pernerColumnNums[3]);
                 if (pernerColumn === pernerColumnNums[0] || pernerColumn === pernerColumnNums[1]) {
                     area = '', market = '';
-                } else if (pernerColumn === pernerColumnNums[3]) {
+                } else if (pernerColumn === pernerColumnNums[2]) {
                     market = '';
                 }
                 let rebrandPhase = '';
